@@ -13,18 +13,29 @@ const ProductDetail = () => {
     console.log(detail);
 
     return (
-        <article>
+        <article className="container text-center">
             <h1>A Closer Look</h1>
             <h2>{detail[0].title}</h2>
             <p>{detail[0].description}</p>
-            <img src={detail[0].thumbnail} alt={detail[0].title} />
-            <img src={detail[0].images[0]} alt={detail[0].title} />
-            <img src={detail[0].images[1]} alt={detail[0].title} />
-            <img src={detail[0].images[2]} alt={detail[0].title} />
-            <img src={detail[0].images[3]} alt={detail[0].title} />
-            <img src={detail[0].images[4]} alt={detail[0].title} />
             <p>$ {detail[0].price}</p>
-            <Link to="/">back to all Products</Link>
+            <div className="row g-2">
+                <div className="col-6"><img src={detail[0].thumbnail} alt={detail[0].title} className="img-thumbnail" /></div>
+                <div className="col-6"><img src={detail[0].images[0]} alt={detail[0].title} className="img-thumbnail" /></div>
+                <div className="col-6"><img src={detail[0].images[1]} alt={detail[0].title} className="img-thumbnail" /></div>
+                <div className="col-6"><img src={detail[0].images[2]} alt={detail[0].title} className="img-thumbnail" /></div>
+                <div className="col-6"><img src={detail[0].images[3]} alt={detail[0].title} className="img-thumbnail" /></div>
+                <div className="col-6"><img src={detail[0].images[4]} alt={detail[0].title} className="img-thumbnail" /></div>
+            </div>
+            <Link
+                to="/"
+                style={
+                    {
+                        display: 'block',
+                        textDecoration: 'none',
+                        color: '#242424',
+                        margin: '20px'
+                    }}>back to all Products
+            </Link>
         </article>
     )
 }

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import ProductCard from './components/ProductCard'
 import { listProducts } from './store/StateSlice/productsSlice'
 import store from '../src/store/store'
+
 const HomeScreen = () => {
     const dispatch = useDispatch();
     const products = useSelector((state) => state.products);
@@ -23,10 +24,6 @@ const HomeScreen = () => {
                 ) : (
                     <>
                         <h2>Products</h2>
-                        {/* 
-                        {productLists.products.map((e) => (
-                            <p key={e.id}>{e.title}</p>
-                        ))} */}
                         {productLists.products.map((e) =>
 
                             <ProductCard

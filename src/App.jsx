@@ -6,22 +6,13 @@ import ProductDetail from './components/ProductDetail'
 
 function App() {
   return (
-    <div>
-      {/* <Router>
-        <Routes>
-          <Route path="/" element={<HomeScreen />} />
-          <Route path="/detail/:prodId" element={<ProductDetail />} >
-          </Route>
-        </Routes>
-      </Router> */}
-
+    <div className='app'>
       <Router>
         <Routes>
           <Route path="/" element={<HomeScreen />}></Route>
           <Route path="/detail/:prodId" element={<ProductDetail />}></Route>
         </Routes>
       </Router>
-
     </div>
   )
 }
