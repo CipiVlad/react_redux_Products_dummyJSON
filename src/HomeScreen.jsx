@@ -2,7 +2,8 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import ProductCard from './components/ProductCard'
 import { listProducts } from './store/StateSlice/productsSlice'
-import store from '../src/store/store'
+import LoadingSpinner from './components/LoadingSpinner'
+
 
 const HomeScreen = () => {
     const dispatch = useDispatch();
@@ -18,7 +19,10 @@ const HomeScreen = () => {
         <div>
             {
                 loading ? (
-                    <p>Loading</p>
+                    <>
+                        <LoadingSpinner />
+                        <p>Loading</p>
+                    </>
                 ) : error ? (
                     <p>Message: {error}</p>
                 ) : (
